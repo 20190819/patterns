@@ -1,9 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"patterns/dependControl"
 	"patterns/factory"
+	"patterns/proxy"
 	"patterns/simple_factory"
+	"patterns/singleton/atomicOnce"
 	"patterns/staticFactory/computer"
 	"patterns/staticFactory/fruit"
 	"patterns/union"
@@ -28,4 +31,14 @@ func main() {
 
 	// 练习：抽象工厂--生产电脑配件
 	computer.Biz()
+
+	// atomicOnce 标记内存状态
+	s1 := atomicOnce.GetInstanceByOnce()
+	s2 := atomicOnce.GetInstanceByOnce()
+	fmt.Println(s1 == s2)
+	s1.SomeThing()
+	s2.SomeThing()
+
+	// 代理模式
+	proxy.TestProxy()
 }
