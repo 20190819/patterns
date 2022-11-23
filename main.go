@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"patterns/adapter"
 	"patterns/decorator"
 	"patterns/dependControl"
 	"patterns/factory"
@@ -33,16 +34,18 @@ func main() {
 	// 练习：抽象工厂--生产电脑配件
 	computer.Biz()
 
+	// 单例模式
 	// atomicOnce 标记内存状态
 	s1 := atomicOnce.GetInstanceByOnce()
 	s2 := atomicOnce.GetInstanceByOnce()
 	fmt.Println(s1 == s2)
-	s1.SomeThing()
-	s2.SomeThing()
 
 	// 代理模式
 	proxy.TestProxy()
 
 	// 装饰器模式
 	decorator.TestDecorator()
+
+	// 适配器模式
+	adapter.TestAdapter()
 }
