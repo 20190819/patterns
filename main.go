@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"patterns/decorator"
 	"patterns/dependControl"
 	"patterns/factory"
 	"patterns/proxy"
@@ -41,4 +42,7 @@ func main() {
 
 	// 代理模式
 	proxy.TestProxy()
+
+	// 装饰器模式
+	decorator.TestDecorator()
 }
