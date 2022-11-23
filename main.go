@@ -5,6 +5,7 @@ import (
 	"patterns/adapter"
 	"patterns/decorator"
 	"patterns/dependControl"
+	"patterns/facade"
 	"patterns/factory"
 	"patterns/proxy"
 	"patterns/simple_factory"
@@ -48,4 +49,8 @@ func main() {
 
 	// 适配器模式
 	adapter.TestAdapter()
+
+	// 门面模式
+	facade.TestFacade()
+	facade.TestKTVFacade()
 }
