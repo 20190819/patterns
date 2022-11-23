@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"patterns/adapter"
+	"patterns/command"
 	"patterns/decorator"
 	"patterns/dependControl"
 	"patterns/facade"
@@ -58,4 +59,8 @@ func main() {
 	// 模板方法模式
 	template.TestMakeCoffee()
 	template.TestMakeTea()
+
+	// 命令模式
+	command.TestCommand()
+	command.TestShaoKao()
 }
