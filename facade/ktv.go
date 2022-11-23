@@ -61,7 +61,7 @@ func (k *KTVFacade) mB() {
 }
 
 func TestKTVFacade() {
-	fmt.Println("\n")
+	fmt.Printf("\n")
 	ktv := NewKTVFacade(new(TV), new(VoiceBox), new(Light))
 	ktv.mA()
 	ktv.mB()

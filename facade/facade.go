@@ -53,7 +53,7 @@ func (s *SystemFacade) mCD() {
 
 func TestFacade() {
 
-	fmt.Println("\n")
+	fmt.Printf("\n")
 	// 不使用 门面模式
 	subA := new(SubsystemA)
 	subB := new(SubSystemB)

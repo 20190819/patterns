@@ -12,6 +12,7 @@ import (
 	"patterns/singleton/atomicOnce"
 	"patterns/staticFactory/computer"
 	"patterns/staticFactory/fruit"
+	"patterns/template"
 	"patterns/union"
 )
 
@@ -53,4 +54,8 @@ func main() {
 	// 门面模式
 	facade.TestFacade()
 	facade.TestKTVFacade()
+
+	// 模板方法模式
+	template.TestMakeCoffee()
+	template.TestMakeTea()
 }

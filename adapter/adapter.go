@@ -49,7 +49,7 @@ func (p *Phone) charge() {
 // 业务逻辑层
 
 func TestAdapter() {
-	fmt.Println("\n")
+	fmt.Printf("\n")
 	phone := NewPhone(NewAdapter(new(V220)))
 	phone.charge()
 }
