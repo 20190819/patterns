@@ -37,12 +37,12 @@ func (cc *catC) Eat() {
 
 func BizUnion() {
 	// 继承
-	cb:=new(catB)
+	cb := new(catB)
 	cb.Eat()
 	cb.Sleep()
 
 	// 组合
-	cc:=NewCatC()
+	cc := NewCatC()
 	cc.cat.Eat()
 	cc.Eat()
 	cc.Sleep()

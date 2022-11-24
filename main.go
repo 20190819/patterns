@@ -5,36 +5,51 @@ import (
 	"patterns/adapter"
 	"patterns/command"
 	"patterns/decorator"
-	"patterns/dependControl"
 	"patterns/facade"
 	"patterns/factory"
+	"patterns/observer"
+	dependControl2 "patterns/principles/dependControl"
+	union2 "patterns/principles/union"
 	"patterns/proxy"
 	"patterns/simple_factory"
 	"patterns/singleton/atomicOnce"
 	"patterns/staticFactory/computer"
 	"patterns/staticFactory/fruit"
+	"patterns/strategy"
 	"patterns/template"
-	"patterns/union"
 )
 
 func main() {
 
-	// 依赖反转
-	dependControl.BizDriveCar()
+	// ========设计原则========
+	// 单一职责原则
 
-	// 练习：组合优于继承
-	union.BizUnion()
+	// 开闭原则
+
+	// 里氏代换原则
+
+	// 接口隔离原则
+
+	// 迪米特法则
+
+	// 依赖反转原则
+	dependControl2.BizDriveCar()
+
+	// 原则：合成复用优于继承
+	union2.BizUnion()
+
+	//==========常用设计模式==========
 
 	// 简单工厂
 	simpleFactory.Biz()
 
-	// 练习：工厂模式
+	// 工厂模式
 	factory.BizFactory()
 
-	// 练习：抽象工厂--生产水果
+	// 抽象工厂--生产水果
 	fruit.Biz()
 
-	// 练习：抽象工厂--生产电脑配件
+	// 抽象工厂--生产电脑配件
 	computer.Biz()
 
 	// 单例模式
@@ -52,7 +67,7 @@ func main() {
 	// 适配器模式
 	adapter.TestAdapter()
 
-	// 门面模式
+	// 门面(外观)模式
 	facade.TestFacade()
 	facade.TestKTVFacade()
 
@@ -63,4 +78,11 @@ func main() {
 	// 命令模式
 	command.TestCommand()
 	command.TestShaoKao()
+
+	// 策略模式
+	strategy.TestStrategy()
+	strategy.TestSaleStrategy()
+
+	// 观察者模式
+	observer.TestStudentObserver()
 }
